@@ -13,21 +13,18 @@ namespace HomeWork
             //    Чи́сла Фибона́ччи -элементы числовой последовательности в которой первые два числа равны 0 и 1, 
             //    а каждое последующее число равно сумме двух предыдущих чисел, т.е. 0, 1, 1, 2, 3, 5 и т.д.
             //    Создайте массив, содержащий первые 8 чисел данной последовательности
+                        
+            int[] b = new int[8];
 
-            int a = 8;
-            int[] b = new int[a];
+            b[0] = 0;
+            b[1] = 1;
 
-            if (a >= 1)
-                b[0] = 0;
-            if (a >= 2)
-                b[1] = 1;
-
-            for (int i = 2; i < a; i++)
+            for (int i = 2; i < b.Length; i++)
             {
                 b[i] = b[i - 1] + b[i - 2];
             }
 
-            Console.WriteLine("Task 1. First 8 Fibonacci numbers:");
+            Console.WriteLine("Task 1. Fibonacci Array:");
             foreach (int number in b)
             {
                 Console.WriteLine(number);
@@ -63,14 +60,25 @@ namespace HomeWork
                 { 4, 9, 16 },
                 { 8, 27, 64 }
             };
-            Console.WriteLine("Task 3. Two-dimensional array:");
-            foreach (int numb in array1)
+
+            for (int i = 0; i< 3; i++)
             {
-                Console.WriteLine(numb);
+                for (int j = 0; j < 3; j++)
+                {
+                    array1[i, j] = (int)Math.Pow(j+2, i+1);
+                }
+            }
+            Console.WriteLine("Task 3. Two-dimensional array:");
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write(array1[(int)i, (int)j] + " ");
+                }
+                Console.WriteLine();
             }
 
             Console.WriteLine();
-
 
             //Задание 4
             //    Вам нужно будет создать и проинициализировать jagged array(ломанный массив). 
@@ -84,7 +92,7 @@ namespace HomeWork
             const double e = 2.71828;
             const double PI = 3.14159;
 
-            double[][] array3 = new double[5][];
+            double[][] array3 = new double[3][];
             array3[0] = new double[] { 1, 2, 3, 4, 5 };
             array3[1] = new double[] { Math.E, Math.PI };
             array3[2] = new double[] { Math.Log10(1), Math.Log10(10), Math.Log10(100), Math.Log10(1000) };
@@ -99,6 +107,8 @@ namespace HomeWork
 
                 Console.WriteLine();
             }
+
+            Console.WriteLine();
 
             //Задание 5.
             //  Скопируйте первые 3 элемента первого массива во второй.Воспользуйтесь классом Array.

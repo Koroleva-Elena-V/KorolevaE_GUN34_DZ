@@ -54,13 +54,8 @@ namespace HomeWork
             //    Вторая строка -числа 2,3 и 4 в степени 2 
             //    Третья - числа 2,3 и 4 в степени 3
 
-            int[,] array1 = new int[3, 3]
-            {
-                { 2, 3, 4 },
-                { 4, 9, 16 },
-                { 8, 27, 64 }
-            };
-
+            int[,] array1 = new int[3, 3];
+           
             for (int i = 0; i< 3; i++)
             {
                 for (int j = 0; j < 3; j++)
@@ -89,9 +84,6 @@ namespace HomeWork
             //    Третий массив -логарифм по основанию 10 чисел 1, 10, 100 и 1000(используя функцию log).
             //    Важно! Используйте статический класс Math для констант и логарифмов Ссылка
 
-            const double e = 2.71828;
-            const double PI = 3.14159;
-
             double[][] array3 = new double[3][];
             array3[0] = new double[] { 1, 2, 3, 4, 5 };
             array3[1] = new double[] { Math.E, Math.PI };
@@ -117,10 +109,10 @@ namespace HomeWork
             int[] array = { 1, 2, 3, 4, 5 }; 
             int[] array2 = { 7, 8, 9, 10, 11, 12, 13 };
 
-            //////Array.Copy(array, 0, array2, 0, 3);
+            Array.Copy(array, 0, array2, 0, 3);
 
-            //////foreach (int t in array2)
-            //////         Console.WriteLine($"{t}"); 
+            foreach (int t in array2)
+                Console.WriteLine($"{t}");
 
             Console.WriteLine();
 
